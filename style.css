@@ -1,0 +1,32 @@
+/*================================
+Typography
+================================*/
+html {
+    color: #022b3a;
+}
+
+a {
+    color: #fff;
+}
+
+body {
+    margin: auto;
+    max-width: 40rem;
+}
+
+/*================================
+Header Component
+================================*/
+header {
+    background-color: #c62f2f;
+    padding: 2rem;
+}
+
+/*================================
+Footer Component
+================================*/
+footer {
+    background-color: #8e0007;
+    color: #fff;
+    padding: 2rem;
+}
