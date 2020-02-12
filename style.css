@@ -10,22 +10,79 @@ main {
     max-width: 40rem;
 }
 
+.swatches {
+    display: flex;
+}
+
+.typography {
+    display: flex;
+}
+
+.typography-example {
+    max-width: 20rem;
+    padding-left: 2rem;
+}
+
 /*================================
 Typography
 ================================*/
 html {
-    color: #022b3a;
+    --font-primary: 'Muli', sans-serif;
+    --font-secondary: 'Work Sans', sans-serif;
+    color: var(--color-blue);
 }
 
 a {
     color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus{
+    border: solid 1px white;
+}
+
+a:active{
+    border: solid 1px white;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    margin: .25rem;
+    padding: .25rem;
+}
+
+ul {
+    padding: 0;
+}
+
+p{
+    font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+} 
+
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    text-decoration: none;
 }
 
 /*================================
 Header Component
 ================================*/
 header {
-    background-color: #c62f2f;
+    background-color: var(--color-red);
     padding: 2rem;
 }
 
@@ -33,7 +90,19 @@ header {
 Footer Component
 ================================*/
 footer {
-    background-color: #8e0007;
+    background-color: var(--color-red-dark);
     color: #fff;
     padding: 2rem;
+}
+
+/*================================
+Colors
+================================*/
+html {
+    --color-blue: #022b3a;
+    --color-blue-light: #325464;
+    --color-blue-dark: #000015;
+    --color-red: #c62f2f;
+    --color-red-light: #ff6459;
+    --color-red-dark: #8e0007;
 }
