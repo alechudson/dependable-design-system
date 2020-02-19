@@ -30,10 +30,30 @@ html {
     --font-primary: 'Muli', sans-serif;
     --font-secondary: 'Work Sans', sans-serif;
     color: var(--color-blue);
+
+    --ratio: 1.2;
+    --size-one: calc(1rem * var(--ratio));
+    --size-two: calc(var(--size-one) * var(--ratio));
+    --size-three: calc(var(--size-two) * var(--ratio));
+    --size-four: calc(var(--size-three) * var(--ratio));
+    --size-five: calc(var(--size-four) * var(--ratio));
+    --size-six: calc(var(--size-five) * var(--ratio));
+    --size-one-smaller: calc(1rem / var(--ratio));
+
+    line-height: 1.5;
+}
+
+main {
+    font-family: var(--font-primary);
 }
 
 a {
-    color: #fff;
+    color: var(--color-blue-light);
+ }
+
+nav a {
+    color: white;
+    font-family: var(--font-primary);
     text-decoration: none;
 }
 
@@ -60,8 +80,18 @@ nav ul li {
     padding: .25rem;
 }
 
-ul {
+nav ul {
     padding: 0;
+}
+
+.logo {
+    border: .25rem solid #fff;
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-size: 2.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem;
 }
 
 p{
@@ -70,12 +100,58 @@ p{
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-secondary);
+    margin: 1.5em 0 0 0;
 } 
 
-.logo {
+.header-link {
+    color: var(--color-blue-light);
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: var(--size-six);
+}
+
+h2 {
+    font-size: var(--size-five);
+}
+
+h3 {
+    font-size: var(--size-four);
+}
+
+h4 {
+    font-size: var(--size-three);
+}
+
+h5 {
+    font-size: var(--size-two);
+}
+
+h6 {
+    font-size: var(--size-one);
+}
+
+.featured-text {
+    font-style: italic;
+    font-size: var(--size-one);
+    margin: .25rem;
+}
+
+.tertiary-copy {
     font-family: var(--font-secondary);
-    font-size: 2rem;
-    text-decoration: none;
+    font-weight: 700;
+}
+
+
+blockquote {
+    color: var(--color-red);
+    font-size: var(--size-two);
+    margin: 1rem;
+}
+
+cite {
+    color: var(--color-red);
 }
 
 /*================================
@@ -105,4 +181,15 @@ html {
     --color-red: #c62f2f;
     --color-red-light: #ff6459;
     --color-red-dark: #8e0007;
+}
+
+/*================================
+Examples
+================================*/
+
+figure {
+    background-image:linear-gradient(#f0f0f0, #fcfcfc);
+    border-top: .5rem solid #222;
+    margin-left: 1rem; 
+    padding: .75rem;
 }
