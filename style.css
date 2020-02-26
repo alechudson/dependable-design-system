@@ -47,11 +47,11 @@ a:hover {
 }
 
 a:focus{
-    border: solid 1px white;
+    text-decoration: underline;
 }
 
 a:active{
-    border: solid 1px white;
+    text-decoration: underline;
 }
 
 .logo {
@@ -198,4 +198,90 @@ figure {
 .typography-example {
     max-width: 20rem;
     padding-left: 2rem;
+}
+
+/*================================
+Link-Button Component
+================================*/
+
+.link-button-normal, .link-button-hero, .link-button-tertiary, .link-button-normal-inverted, .link-button-hero-inverted, .link-button-tertiary-inverted{
+    color: white;
+    display: inline-block;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.link-button-hero, .link-button-hero:visited{
+    background-color: var(--color-red-dark);
+    padding: 1rem;
+}
+
+.link-button-normal, .link-button-normal:visited{
+    background-color: var(--color-red);
+    padding: .75rem;
+}
+
+.link-button-tertiary, .link-button-tertiary:visited{
+    background-color: var(--color-red-light);
+    padding: .5rem;
+}
+
+.link-button-normal:hover, .link-button-hero:hover, .link-button-tertiary:hover, .link-button-normal:focus, .link-button-hero:focus, .link-button-tertiary:focus{
+    background-color: var(--color-blue);
+    text-decoration: none;
+    transition: .5s;
+}
+
+.link-button-normal:active, .link-button-hero:active, .link-button-tertiary:active{
+    background-color: var(--color-blue-light);
+    transition: .1s;
+}
+
+.link-button-hero-inverted, .link-button-hero-inverted:visited{
+    background-color: var(--color-blue-dark);
+    padding: 1rem;
+}
+
+.link-button-normal-inverted, .link-button-normal-inverted:visited{
+    background-color: var(--color-blue);
+    padding: .75rem;
+}
+
+.link-button-tertiary-inverted, .link-button-tertiary-inverted:visited{
+    background-color: var(--color-blue-light);
+    padding: .5rem;
+}
+
+.link-button-normal-inverted:hover, .link-button-hero-inverted:hover, .link-button-tertiary-inverted:hover, .link-button-normal-inverted:focus, .link-button-hero-inverted:focus, .link-button-tertiary-inverted:focus{
+    background-color: var(--color-red);
+    text-decoration: none;
+    transition: .5s;
+}
+
+.link-button-normal-inverted:active, .link-button-hero-inverted:active, .link-button-tertiary-inverted:active{
+    background-color: var(--color-red-light);
+    transition: .1s;
+}
+
+/*================================
+Accordion Component
+================================*/
+
+details {
+    margin-bottom: 1rem;
+}
+
+details div {
+    border-left: .25rem solid var(--color-red-light);
+    margin-left: 2rem;
+}
+
+details div p {
+    margin-left: 1rem;
+}
+
+summary {
+    background-color: var(--color-blue-light);
+    color: white;
+    padding: .5rem;
 }
