@@ -160,6 +160,7 @@ Footer Component
 footer {
     background-color: var(--color-primary-dark);
     color: #fff;
+    margin-top: 5rem;
     padding: 2rem;
 }
 
@@ -283,5 +284,5 @@ details div p {
 summary {
     background-color: var(--color-secondary-light);
     color: white;
-    padding: .5rem;
+    padding: .75rem;
 }
