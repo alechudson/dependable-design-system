@@ -10,19 +10,6 @@ main {
     max-width: 40rem;
 }
 
-.swatches {
-    display: flex;
-}
-
-.typography {
-    display: flex;
-}
-
-.typography-example {
-    max-width: 20rem;
-    padding-left: 2rem;
-}
-
 /*================================
 Typography
 ================================*/
@@ -51,12 +38,6 @@ a {
     color: var(--color-blue-light);
  }
 
-nav a {
-    color: white;
-    font-family: var(--font-primary);
-    text-decoration: none;
-}
-
 a:visited {
     text-decoration: none;
 }
@@ -71,17 +52,6 @@ a:focus{
 
 a:active{
     border: solid 1px white;
-}
-
-nav ul li {
-    display: inline;
-    list-style-type: none;
-    margin: .25rem;
-    padding: .25rem;
-}
-
-nav ul {
-    padding: 0;
 }
 
 .logo {
@@ -162,6 +132,28 @@ header {
     padding: 2rem;
 }
 
+
+/*================================
+Nav Component
+================================*/
+
+nav a {
+    color: white;
+    font-family: var(--font-primary);
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    margin: .25rem;
+    padding: .25rem;
+}
+
+nav ul {
+    padding: 0;
+}
+
 /*================================
 Footer Component
 ================================*/
@@ -192,4 +184,18 @@ figure {
     border-top: .5rem solid #222;
     margin-left: 1rem; 
     padding: .75rem;
+}
+
+.swatches {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.typography {
+    display: flex;
+}
+
+.typography-example {
+    max-width: 20rem;
+    padding-left: 2rem;
 }
