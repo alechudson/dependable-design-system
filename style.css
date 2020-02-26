@@ -16,7 +16,7 @@ Typography
 html {
     --font-primary: 'Muli', sans-serif;
     --font-secondary: 'Work Sans', sans-serif;
-    color: var(--color-blue);
+    color: var(--color-secondary);
 
     --ratio: 1.2;
     --size-one: calc(1rem * var(--ratio));
@@ -35,7 +35,7 @@ main {
 }
 
 a {
-    color: var(--color-blue-light);
+    color: var(--color-secondary-light);
  }
 
 a:visited {
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 } 
 
 .header-link {
-    color: var(--color-blue-light);
+    color: var(--color-secondary-light);
     text-decoration: underline;
 }
 
@@ -102,7 +102,7 @@ h6 {
     font-size: var(--size-one);
 }
 
-.featured-text {
+.featuprimary-text {
     font-style: italic;
     font-size: var(--size-one);
     margin: .25rem;
@@ -115,20 +115,20 @@ h6 {
 
 
 blockquote {
-    color: var(--color-red);
+    color: var(--color-primary);
     font-size: var(--size-two);
     margin: 1rem;
 }
 
 cite {
-    color: var(--color-red);
+    color: var(--color-primary);
 }
 
 /*================================
 Header Component
 ================================*/
 header {
-    background-color: var(--color-red);
+    background-color: var(--color-primary);
     padding: 2rem;
 }
 
@@ -158,7 +158,7 @@ nav ul {
 Footer Component
 ================================*/
 footer {
-    background-color: var(--color-red-dark);
+    background-color: var(--color-primary-dark);
     color: #fff;
     padding: 2rem;
 }
@@ -167,12 +167,12 @@ footer {
 Colors
 ================================*/
 html {
-    --color-blue: #022b3a;
-    --color-blue-light: #325464;
-    --color-blue-dark: #000015;
-    --color-red: #c62f2f;
-    --color-red-light: #ff6459;
-    --color-red-dark: #8e0007;
+    --color-secondary: #022b3a;
+    --color-secondary-light: #325464;
+    --color-secondary-dark: #000015;
+    --color-primary: #c62f2f;
+    --color-primary-light: #ff6459;
+    --color-primary-dark: #8e0007;
 }
 
 /*================================
@@ -212,54 +212,54 @@ Link-Button Component
 }
 
 .link-button-hero, .link-button-hero:visited{
-    background-color: var(--color-red-dark);
+    background-color: var(--color-primary-dark);
     padding: 1rem;
 }
 
 .link-button-normal, .link-button-normal:visited{
-    background-color: var(--color-red);
+    background-color: var(--color-primary);
     padding: .75rem;
 }
 
 .link-button-tertiary, .link-button-tertiary:visited{
-    background-color: var(--color-red-light);
+    background-color: var(--color-primary-light);
     padding: .5rem;
 }
 
 .link-button-normal:hover, .link-button-hero:hover, .link-button-tertiary:hover, .link-button-normal:focus, .link-button-hero:focus, .link-button-tertiary:focus{
-    background-color: var(--color-blue);
+    background-color: var(--color-secondary);
     text-decoration: none;
     transition: .5s;
 }
 
 .link-button-normal:active, .link-button-hero:active, .link-button-tertiary:active{
-    background-color: var(--color-blue-light);
+    background-color: var(--color-secondary-light);
     transition: .1s;
 }
 
 .link-button-hero-inverted, .link-button-hero-inverted:visited{
-    background-color: var(--color-blue-dark);
+    background-color: var(--color-secondary-dark);
     padding: 1rem;
 }
 
 .link-button-normal-inverted, .link-button-normal-inverted:visited{
-    background-color: var(--color-blue);
+    background-color: var(--color-secondary);
     padding: .75rem;
 }
 
 .link-button-tertiary-inverted, .link-button-tertiary-inverted:visited{
-    background-color: var(--color-blue-light);
+    background-color: var(--color-secondary-light);
     padding: .5rem;
 }
 
 .link-button-normal-inverted:hover, .link-button-hero-inverted:hover, .link-button-tertiary-inverted:hover, .link-button-normal-inverted:focus, .link-button-hero-inverted:focus, .link-button-tertiary-inverted:focus{
-    background-color: var(--color-red);
+    background-color: var(--color-primary);
     text-decoration: none;
     transition: .5s;
 }
 
 .link-button-normal-inverted:active, .link-button-hero-inverted:active, .link-button-tertiary-inverted:active{
-    background-color: var(--color-red-light);
+    background-color: var(--color-primary-light);
     transition: .1s;
 }
 
@@ -272,7 +272,7 @@ details {
 }
 
 details div {
-    border-left: .25rem solid var(--color-red-light);
+    border-left: .25rem solid var(--color-primary-light);
     margin-left: 2rem;
 }
 
@@ -281,7 +281,7 @@ details div p {
 }
 
 summary {
-    background-color: var(--color-blue-light);
+    background-color: var(--color-secondary-light);
     color: white;
     padding: .5rem;
 }
