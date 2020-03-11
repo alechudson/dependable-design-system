@@ -286,3 +286,60 @@ summary {
     color: white;
     padding: .75rem;
 }
+
+/*================================
+Modal Component
+================================*/
+
+#modal-demo {
+    border: .25rem solid;
+    border-color: var(--color-primary);
+    box-shadow: 5px 5px;
+    color: var(--color-secondary);
+    padding: 1rem;
+    text-align: center;
+}
+
+#modal-demo h3 {
+    margin-top: 1rem;
+}
+
+button {
+    display: block;
+    margin: auto;
+}
+
+dialog[open] {
+    animation: fade-in .75s ease-in-out;
+}
+
+dialog::backdrop {
+    animation: fade-in-bg 1.5s ease;
+    background-image: url(images/toolshed.jpg);
+    background-size: 100%;
+    opacity: .25;
+}
+
+@keyframes fade-in {
+	
+	0% {
+		opacity: 0;
+	} 
+	
+	100% {
+		opacity: 1;
+	}
+	
+}
+
+@keyframes fade-in-bg {
+	
+	0% {
+		opacity: 0;
+	} 
+	
+	100% {
+		opacity: .25;
+	}
+	
+}

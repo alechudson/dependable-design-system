@@ -83,7 +83,19 @@
                     </div>
                     
                 </details>
-                
+            </figure>
+        </section>
+
+        <section>
+            <figure>
+                <button id="open-modal" type="button">Open Modal</button>
+
+                <dialog id="modal-demo">
+                    <h3>Modal Title</h3>
+                    <p>This is a demo of a modal.</p>
+                    <p>Click around modal to dismiss</p>
+                </dialog>
+
             </figure>
         </section>
     </main>
@@ -99,6 +111,25 @@
         </nav>
         <p>©2020 Alec Hudson</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+        
+        const modal = document.querySelector('dialog');
+        const open = document.getElementById('open-modal');
+        
+        open.addEventListener('click', () => {
+        modal.showModal();
+        });
+        
+        modal.addEventListener('click', event => {
+        if (event.target === modal) {
+        modal.close('cancelled');
+        }
+        });
+        
+        });
+        </script>
 
 </body>
 </html>
