@@ -102,7 +102,7 @@ h6 {
     font-size: var(--size-one);
 }
 
-.featuprimary-text {
+.featured-text {
     font-style: italic;
     font-size: var(--size-one);
     margin: .25rem;
