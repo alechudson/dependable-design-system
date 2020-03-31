@@ -278,7 +278,7 @@ details div {
 }
 
 details div p {
-    margin-left: 1rem;
+    padding-left: 1rem;
 }
 
 summary {
@@ -291,7 +291,7 @@ summary {
 Modal Component
 ================================*/
 
-#modal-demo {
+dialog {
     border: .25rem solid;
     border-color: var(--color-primary);
     box-shadow: 5px 5px;
@@ -300,7 +300,7 @@ Modal Component
     text-align: center;
 }
 
-#modal-demo h3 {
+dialog h3 {
     margin-top: 1rem;
 }
 
@@ -310,27 +310,19 @@ button {
 }
 
 dialog[open] {
-    animation: fade-in .75s ease-in-out;
+    animation-name: slide-right-left;
+    animation-duration: 2s;
+    animation-timing-function: ease;
 }
 
 dialog::backdrop {
     animation: fade-in-bg 1.5s ease;
     background-image: url(images/toolshed.jpg);
-    background-size: 100%;
+    background-size: cover;
     opacity: .25;
 }
 
-@keyframes fade-in {
-	
-	0% {
-		opacity: 0;
-	} 
-	
-	100% {
-		opacity: 1;
-	}
-	
-}
+
 
 @keyframes fade-in-bg {
 	
@@ -342,4 +334,40 @@ dialog::backdrop {
 		opacity: .25;
 	}
 	
+}
+
+@keyframes slide-right-left {
+	
+	0% {
+		opacity: 0;
+		transform: translatex(100rem);
+    }
+    
+    20% {
+        transform: rotate(20deg);
+        transform-origin: 50% 50%;
+    }
+
+	50% {
+		transform: translatex(-2rem);
+    }
+    
+    70% {
+        transform: rotate(360deg);
+        transform-origin: 50% 50%;
+    }
+
+	80% {
+
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+	100% {
+		opacity: 1;
+        transform: translatex(0);
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+    
 }
