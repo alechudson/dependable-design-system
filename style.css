@@ -88,6 +88,8 @@ h2 {
 
 h3 {
     font-size: var(--size-four);
+    margin-top: 1rem;
+    margin-bottom: .5em;
 }
 
 h4 {
@@ -288,6 +290,44 @@ summary {
 }
 
 /*================================
+Form Component
+
+
+For some reason I can't figure out how to get these to center in the figure.
+================================*/
+form label {
+    display: block;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+input, textarea, select, submit {
+    padding: .25rem;
+    text-align: center;
+    margin: 1rem;
+    width: 20rem;
+}
+
+form figure input:focus {
+    outline: solid var(--color-primary-light);
+}
+
+.input-error {
+    border-bottom: solid .5rem var(--color-primary-dark);
+}
+
+.button-submit {
+    border: solid .25rem var(--color-primary);
+    background-color: white;
+    color: var(--color-secondary-dark);
+    font-size: 1rem;
+}
+
+.button-submit:hover, .button-submit:focus {
+    border: solid .25rem var(--color-secondary);
+}
+
+/*================================
 Modal Component
 ================================*/
 
@@ -321,8 +361,6 @@ dialog::backdrop {
     background-size: cover;
     opacity: .25;
 }
-
-
 
 @keyframes fade-in-bg {
 	
