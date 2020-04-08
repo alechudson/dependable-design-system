@@ -18,7 +18,7 @@ html {
     --font-secondary: 'Work Sans', sans-serif;
     color: var(--color-secondary);
 
-    --ratio: 1.2;
+    --ratio: 1.1;
     --size-one: calc(1rem * var(--ratio));
     --size-two: calc(var(--size-one) * var(--ratio));
     --size-three: calc(var(--size-two) * var(--ratio));
@@ -43,11 +43,12 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 a:focus{
     text-decoration: underline;
+    
 }
 
 a:active{
@@ -58,7 +59,7 @@ a:active{
     border: .25rem solid #fff;
     color: #fff;
     font-family: var(--font-secondary);
-    font-size: 2.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
     padding: .5rem;
@@ -66,11 +67,12 @@ a:active{
 
 p{
     font-family: var(--font-primary);
+    margin: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-secondary);
-    margin: 1.5em 0 0 0;
+    margin: 1.5em 0 0 1rem;
 } 
 
 .header-link {
@@ -126,6 +128,26 @@ cite {
     color: var(--color-primary);
 }
 
+@media ( min-width: 450px ) {
+
+    html {
+        --ratio: 1.15;
+        --size-one: calc(1rem * var(--ratio));
+        --size-two: calc(var(--size-one) * var(--ratio));
+        --size-three: calc(var(--size-two) * var(--ratio));
+        --size-four: calc(var(--size-three) * var(--ratio));
+        --size-five: calc(var(--size-four) * var(--ratio));
+        --size-six: calc(var(--size-five) * var(--ratio));
+        --size-one-smaller: calc(1rem / var(--ratio));
+    
+        line-height: 1.6;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+}
+
 /*================================
 Header Component
 ================================*/
@@ -142,18 +164,44 @@ Nav Component
 nav a {
     color: white;
     font-family: var(--font-primary);
-    text-decoration: none;
-}
-
-nav ul li {
-    display: inline;
-    list-style-type: none;
-    margin: .25rem;
+    font-size: 1.25rem;
     padding: .25rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-nav ul {
+header nav ul li a:hover {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: .25s ease-out;
+}
+
+header nav ul li {
+    list-style-type: none;
+    margin: .25rem 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 0;
     padding: 0;
+}
+
+.page-current {
+    color: var(--color-secondary);
+}
+
+@media ( min-width: 470px ) {
+
+    header nav ul {
+        flex-direction: row;
+    }
+
+    header nav ul li {
+        margin: 0 .5rem;
+    }
+
 }
 
 /*================================
@@ -171,11 +219,14 @@ Colors
 ================================*/
 html {
     --color-secondary: #022b3a;
-    --color-secondary-light: #325464;
-    --color-secondary-dark: #000015;
+    --color-secondary-light: #023A50;
+    --color-secondary-dark: #021E28;
     --color-primary: #c62f2f;
-    --color-primary-light: #ff6459;
-    --color-primary-dark: #8e0007;
+    --color-primary-light: #DD7171;
+    --color-primary-dark: #882020;
+    --color-tertiary: #70a288;
+    --color-tertiary-light: #ADC9BA;
+    --color-tertiary-dark: #4B735E;
 }
 
 /*================================
@@ -185,7 +236,7 @@ Examples
 figure {
     background-image:linear-gradient(#f0f0f0, #fcfcfc);
     border-top: .5rem solid #222;
-    margin-left: 1rem; 
+    margin: 1rem; 
     padding: 1rem;
 }
 
@@ -305,7 +356,14 @@ input, textarea, select, submit {
     padding: .25rem;
     text-align: center;
     margin: 1rem;
-    width: 20rem;
+    min-width: 15rem;
+}
+
+form figure div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 form figure input:focus {
@@ -317,7 +375,7 @@ form figure input:focus {
 }
 
 .button-submit {
-    border: solid .25rem var(--color-primary);
+    border: solid .25rem var(--color-tertiary);
     background-color: white;
     color: var(--color-secondary-dark);
     font-size: 1rem;
@@ -325,6 +383,37 @@ form figure input:focus {
 
 .button-submit:hover, .button-submit:focus {
     border: solid .25rem var(--color-secondary);
+}
+
+
+/*================================
+Secondary Navigation
+================================*/
+.nav-secondary {
+    background-color: var(--color-secondary);
+    border-left: .25rem solid var(--color-primary-light);
+    display: flex;
+    margin: auto;
+    max-width: 15rem;
+}
+
+.nav-secondary ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-secondary ul li {
+    padding: .5rem .75rem;
+}
+
+.page-current-secondary {
+    color: var(--color-primary-light);
+    
+}
+
+.page-secondary a:hover {
+    color: wheat;
 }
 
 /*================================
