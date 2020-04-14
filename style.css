@@ -63,6 +63,7 @@ a:active{
     font-weight: 700;
     text-decoration: none;
     padding: .5rem;
+    white-space: nowrap;
 }
 
 p{
@@ -227,6 +228,9 @@ html {
     --color-tertiary: #70a288;
     --color-tertiary-light: #ADC9BA;
     --color-tertiary-dark: #4B735E;
+    --color-fourth: #F46036;
+    --color-fourth-light: #FAB39E;
+    --color-fourth-dark: #C3330B;
 }
 
 /*================================
@@ -450,6 +454,131 @@ dialog::backdrop {
     background-size: cover;
     opacity: .25;
 }
+
+/*================================
+Notifications
+================================*/
+
+.error h4, .warning h4, .neutral h4, .success h4 {
+    margin: 1rem;
+}
+
+.error img, .warning img, .neutral img, .success img {
+    margin: 1rem;
+}
+
+.error {
+    align-items: center;
+    background-color: var(--color-primary);
+    border: .25rem solid var(--color-secondary);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+.warning {
+    align-items: center;
+    background-color: var(--color-fourth);
+    border: .25rem solid var(--color-secondary);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+.neutral {
+    align-items: center;
+    background-color: var(--color-secondary-light);
+    border: .25rem solid var(--color-secondary);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+.success {
+    align-items: center;
+    background-color: var(--color-tertiary-dark);
+    border: .25rem solid var(--color-secondary);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 25rem;
+    margin: 1rem auto;
+}
+
+/*================================
+Animations
+================================*/
+.hero-block {
+    align-items: center;
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    background-position: baseline;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    justify-content: space-evenly;
+}
+
+.hero-block-info {
+    align-items: center;
+    background-color: rgba(20, 20, 20, .50);
+    border: .25rem solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    margin: 1rem, 2rem;
+    max-width: 30rem;
+}
+
+.hero-block-info a {
+    color: white;
+}
+
+.hero-block-info p {
+    font-size: .95rem;
+}
+
+.hero-block h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 2rem;
+}
+
+.hero-block div {
+    margin: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media ( min-width: 850px ) {
+
+    .hero-block h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-block {
+        flex-direction: row;
+        height: 75vh;
+    }
+
+    .hero-block-info p {
+        font-size: 1rem;
+    }
+
+}
+
+/*================================
+Animations
+================================*/
 
 @keyframes fade-in-bg {
 	
