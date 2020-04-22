@@ -165,7 +165,7 @@ Nav Component
 nav a {
     color: white;
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: var(--size-two);
     padding: .25rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -183,9 +183,8 @@ header nav ul li {
 }
 
 header nav ul {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0 0 0;
+ 
+    margin: 2rem 0 0 ;
     padding: 0;
 }
 
@@ -196,6 +195,7 @@ header nav ul {
 @media ( min-width: 470px ) {
 
     header nav ul {
+        display: flex;
         flex-direction: row;
     }
 
@@ -364,10 +364,9 @@ input, textarea, select, submit {
 }
 
 form figure div {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 
 form figure input:focus {
