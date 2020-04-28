@@ -10,6 +10,9 @@ main {
     max-width: 40rem;
 }
 
+img {
+    max-width: 100%;
+}
 /*================================
 Typography
 ================================*/
@@ -554,10 +557,6 @@ Animations
     margin: 1rem;
 }
 
-img {
-    max-width: 100%;
-}
-
 @media ( min-width: 850px ) {
 
     .hero-block h1 {
@@ -573,6 +572,57 @@ img {
         font-size: 1rem;
     }
 
+}
+
+/*================================
+Information Cards
+================================*/
+
+.info-card-article {
+    border: .25rem solid;
+    color: var(--color-secondary-light);
+    margin: auto;
+    max-width: 20rem;
+}
+
+.info-card-article a, .info-card-profile a, .info-card-action a {
+    text-decoration: none;
+}
+
+.info-card-article:hover {
+    animation: float 1s ease;
+}
+
+.info-card-profile {
+    border: .25rem solid;
+    display: block;
+}
+
+.info-card-profile a, .info-card-profile img {
+    align-items: center;
+    display: flex;
+    max-width: 15rem;
+}
+
+.info-card-action {
+    background-image: url(images/register.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    max-width: 25rem;
+    padding: .75rem;
+    text-align: center;
+}
+
+.info-card-action h4, .info-card-action p {
+    color: white;
+    margin: 1rem;
+    text-shadow: .5px .5px 4px var(--color-secondary);
+}
+
+.publish-date {
+    text-align: center;
 }
 
 /*================================
@@ -625,4 +675,20 @@ Animations
         transform-origin: 50% 50%;
     }
     
+}
+
+@keyframes float {
+
+	0% {
+        transform: scale(1)
+	}
+    
+    15% {
+        transform: scale(1.01)
+    }
+    
+    100% {
+        transform: scale(1)
+	}
+
 }
