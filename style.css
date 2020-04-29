@@ -29,6 +29,7 @@ html {
     --size-five: calc(var(--size-four) * var(--ratio));
     --size-six: calc(var(--size-five) * var(--ratio));
     --size-one-smaller: calc(1rem / var(--ratio));
+    --size-two-smaller: calc(var(--size-one) / var(--ratio));
 
     line-height: 1.5;
 }
@@ -143,6 +144,7 @@ cite {
         --size-five: calc(var(--size-four) * var(--ratio));
         --size-six: calc(var(--size-five) * var(--ratio));
         --size-one-smaller: calc(1rem / var(--ratio));
+        --size-two-smaller: calc(var(--size-one-smaller) / var(--ratio));
     
         line-height: 1.6;
     }
@@ -596,12 +598,17 @@ Information Cards
 .info-card-profile {
     border: .25rem solid;
     display: block;
+    margin: auto;
+    max-width: 15rem;
 }
 
 .info-card-profile a, .info-card-profile img {
     align-items: center;
     display: flex;
-    max-width: 15rem;
+}
+
+.info-card-profile img {
+    visibility: hidden;
 }
 
 .info-card-action {
@@ -621,10 +628,92 @@ Information Cards
     text-shadow: .5px .5px 4px var(--color-secondary);
 }
 
+.contact-info {
+    max-width: .25fr;
+    position: absolute;
+}
+
 .publish-date {
     text-align: center;
 }
 
+@media ( min-width: 430px ) {
+    .info-card-profile img {
+        visibility: visible;
+    }
+
+    .info-card-profile {
+        max-width: 30rem;
+    }
+
+    .contact-info {
+        position: static;
+    }
+}
+
+@media ( min-width: 875px ) {
+    .info-card-action, .info-card-article {
+        font-size: var(--size-one-smaller);
+        padding: 0;
+    }
+
+    .info-card-article h4 {
+        margin: 0 1rem;
+    }
+}
+/*================================
+Card Grid
+================================*/
+
+.card-grid-demo {
+    display: grid;
+    grid-gap: 1rem 0;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+@media ( min-width: 875px ) {
+    .card-grid-demo {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 23rem);
+    }
+}
+
+@media ( min-width: 1280px ) {
+    .card-grid-demo {
+        grid-template-columns: .75fr 1.25fr 1fr;
+        grid-gap: 1rem;
+        grid-template-rows: repeat(6, 28rem);
+        max-width: 70rem;
+        margin: auto;
+    }
+}
+
+/*================================
+Callouts
+================================*/
+
+.callouts {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+@media ( min-width: 875px ) {
+    .callouts {
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+        margin-top: 1rem;
+        max-width: 60rem;
+    }
+}
+
+@media ( min-width: 1280px ) {
+    .callouts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
 /*================================
 Animations
 ================================*/
