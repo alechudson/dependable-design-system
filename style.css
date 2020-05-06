@@ -472,41 +472,23 @@ Notifications
 }
 
 .error {
-    align-items: center;
     background-color: var(--color-primary);
-    border: .25rem solid var(--color-secondary);
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 25rem;
-    margin: 1rem auto;
 }
 
 .warning {
-    align-items: center;
     background-color: var(--color-fourth);
-    border: .25rem solid var(--color-secondary);
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 25rem;
-    margin: 1rem auto;
 }
 
 .neutral {
-    align-items: center;
     background-color: var(--color-secondary-light);
-    border: .25rem solid var(--color-secondary);
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 25rem;
-    margin: 1rem auto;
 }
 
 .success {
-    align-items: center;
     background-color: var(--color-tertiary-dark);
+}
+
+.error, .warning, .neutral, .success {
+    align-items: center;
     border: .25rem solid var(--color-secondary);
     color: white;
     display: flex;
@@ -522,12 +504,12 @@ Animations
     align-items: center;
     background-image: url(images/hero.jpg);
     background-size: cover;
-    background-position: baseline;
+    background-position: center;
     background-repeat: no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
-    height: 85vh;
+    min-height: 85vh;
     justify-content: space-evenly;
 }
 
